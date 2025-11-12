@@ -1,29 +1,84 @@
+:root {
+  --bg-deep: #0d2a1b;          /* main forest base */
+  --bg-panel: #133826;         /* darker moss underlay */
+  --bg-soft: #184d33;          /* misty mid-green */
+  --text: #f5f8f6;
+  --muted: #b7d8c2;            /* soft sage */
+  --accent: #f4b653;           /* fox amber */
+  --accent-2: #7bf0c3;         /* teal glow */
+  --accent-3: #89c9ff;         /* portal blue */
+  --success: #53f4b9;
+  --ring: rgba(111, 224, 181, 0.35);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  --radius: 18px;
+}
+
 body {
-  background-color: #111;
-  color: #eee;
-  font-family: sans-serif;
   margin: 0;
-  padding: 0;
+  color: var(--text);
+  background:
+    radial-gradient(900px 700px at 20% -10%, rgba(30, 100, 60, 0.6), transparent 60%),
+    radial-gradient(1200px 800px at 100% 20%, rgba(20, 60, 35, 0.5), transparent 70%),
+    linear-gradient(180deg, #0d2a1b, #123820 50%, #0a2818 100%);
+  font-family: "Quicksand", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Optional subtle mist layer */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.05), transparent 70%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+/* Panels and hero card */
+.panel {
+  background: linear-gradient(160deg, rgba(19, 56, 38, 0.92), rgba(10, 40, 24, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: clamp(16px, 3vw, 28px);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(123, 240, 195, 0.08), rgba(137, 201, 255, 0.07));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: clamp(16px, 2vw, var(--radius));
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 4vw, 44px);
+  overflow: hidden;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(400px 220px at 50% 0%, rgba(111, 224, 181, 0.2), transparent 75%);
+  filter: blur(16px);
+  z-index: -1;
+}
+
+/* General tweaks */
+a:hover {
+  color: var(--accent-2);
+}
+
+footer {
+  background: rgba(11, 31, 23, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
+  padding: 28px 18px;
+  color: var(--muted);
 }
 
-header {
-  background: #228B22;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-nav a {
-  color: #ffc;
-  margin: 0 0.5em;
-  text-decoration: none;
-}
-
-.hero-logo {
-  width: 75%;
-  max-width: 350px;
-  height: 75%;
-  display: block;
-  margin: 20px auto;
+.brand img {
+  box-shadow: 0 0 15px rgba(123, 240, 195, 0.4);
 }
