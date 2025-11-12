@@ -1,25 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Charlotte's Portal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charlotte’s Portal</title>
+  <meta name="description" content="A father & daughter storybook world of art, music, and hope." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header>
-     <div class="banner">
-      <img src="images/mainlogo.png" alt="" class="hero-logo">
-     </div>
-    <h1>A site for another CJ</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="tipjar.html">Tip Jar</a>
-    </nav>
+
+  <!-- subtle background -->
+  <div class="sky"></div>
+  <div class="firefly fly1"></div>
+  <div class="firefly fly2"></div>
+  <div class="firefly fly3"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="inner">
+      <a class="brand" href="#top">
+        <!-- replace with your logo path -->
+        <img src="/images/charlottes-portal-logo.png" alt="Charlotte’s Portal logo placeholder">
+        <div class="title">Charlotte’s Portal</div>
+      </a>
+      <nav class="links">
+        <a href="#story">Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#projects">Projects</a>
+        <a href="#support">Support</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Welcome to Charlotte's Portal!!!</h2>
-    <p>CJs Website for his youngest daughter, the lil Peanut!!!</p>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="hero-card">
+      <!-- temporary banner image; replace src -->
+      <img class="hero-logo" src="/images/hero-placeholder.jpg" alt="Forest portal with a small fox illustration (placeholder)">
+      <h1>Where imagination finds its way home</h1>
+      <p class="tag">A father & daughter storybook world of <strong>art</strong>, <strong>music</strong>, and <strong>hope</strong>. Charlotte draws, Dad builds — together we make magic.</p>
+      <div class="cta">
+        <a class="btn fox" href="#gallery">Explore the Art</a>
+        <a class="btn ghost" href="#support">Tip Jar / Support</a>
+      </div>
+    </div>
   </main>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="panel two-col">
+      <div>
+        <h2>Our Story</h2>
+        <p>Charlotte’s Portal began as sketches on the kitchen table and bedtime ideas whispered into the dark. We turned the hard days into drawings, the drawings into worlds, and the worlds into a path forward. This site is our shared journal — a growing place for fox tales, tiny heroes, and brave hearts.</p>
+        <p>Every piece you see here is part of our promise: keep creating, keep caring, keep going. 🦊</p>
+      </div>
+      <div>
+        <img src="/images/story-placeholder.jpg" alt="Watercolor foxes under a moonlit tree (placeholder)" style="width:100%; border-radius:14px; border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow)">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Featured Gallery</h2>
+    <div class="grid">
+      <!-- Duplicate & replace with real art -->
+      <figure class="card">
+        <img src="/images/art-1.jpg" alt="Charlotte artwork 1 placeholder">
+        <figcaption class="cap">“Forest Gate” — Charlotte, age 9</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/art-2.jpg" alt="Charlotte artwork 2 placeholder">
+        <figcaption class="cap">“Lantern Fox” — Dad & Charlotte</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/art-3.jpg" alt="Charlotte artwork 3 placeholder">
+        <figcaption class="cap">“Mushroom Choir” — Charlotte</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/images/art-4.jpg" alt="Charlotte artwork 4 placeholder">
+        <figcaption class="cap">“Stargazer Path” — Charlotte</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects We’re Building</h2>
+    <div class="projects">
+      <div class="pcard">
+        <h3>Find the Fox Cubs! (Board Game)</h3>
+        <p>A magnetic hide-and-seek adventure with warm storybook energy and cooperative play.</p>
+        <a class="btn ghost" href="#" aria-label="Read more about the board game">Learn More</a>
+      </div>
+      <div class="pcard">
+        <h3>Through Her Eyes — Storybook</h3>
+        <p>An illustrated journey about courage, family, and finding the way back to each other.</p>
+        <a class="btn ghost" href="#" aria-label="Read more about the storybook">Peek Inside</a>
+      </div>
+      <div class="pcard">
+        <h3>Father & Daughter Gallery</h3>
+        <p>Selected drawings from Charlotte paired with Dad’s notes and tiny poems.</p>
+        <a class="btn ghost" href="#" aria-label="Open the gallery">Open Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <div class="panel">
+      <h2>Support the Dream</h2>
+      <p class="tag">If this little world makes you smile, consider helping us grow it. Every tip goes toward art supplies, printing, and bringing our projects to life.</p>
+      <div class="cta" style="margin-top:8px">
+        <!-- Replace links with your actual endpoints -->
+        <a class="btn fox" href="#" rel="noopener">Donate / Tip Jar</a>
+        <a class="btn ghost" href="https://music4mentalhealthfoundation.org" target="_blank" rel="noopener">Music 4 Mental Health Foundation</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Made with 🧡 by Dad & Charlotte • © <span id="y"></span> • 
+  </footer>
+
+  <script>
+    // tiny enhancement: current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
